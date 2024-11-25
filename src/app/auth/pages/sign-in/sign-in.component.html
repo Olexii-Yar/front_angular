@@ -1,0 +1,35 @@
+<div class="signin-page__wrapper">
+  <div class="signin-page__content-container">
+
+    <span class="page-description">
+    <h1 class="page-title">Введіть дані...</h1>
+    <p class="page-title">Привіт знов! </p>
+    <form class="signup-page__form">
+      <ul class="signup-page__form-list">
+        <li class="signup-page__form-list-item">
+          <pet-world-input [control]="email" [label]="inputLabels.email" [placeholder]="placeholders.email" />
+        </li>
+        <li class="signup-page__form-list-item">
+          <pet-world-input [control]="password" [label]="inputLabels.password" [placeholder]="placeholders.password" />
+        </li>
+      </ul>
+      <pet-world-checkbox [control]="confirmCheckboxControl" class="signup-page__confirm-checkbox">
+        <!-- TODO: add actual link to the policy -->
+        <span class="signup-page__confirm-checkbox--text">
+          Запам'ятайте мене
+          <a class="link link--policy" [routerLink]="'#'">Забув пароль?</a>
+        </span>
+      </pet-world-checkbox>
+
+      <pet-world-button class="confirm-button" (click)="signIn()">
+        {{ buttonContent.login }}
+      </pet-world-button>
+    </form>
+  </span>
+    <p class="action-description">
+     Ще не маєте аккаунту?
+      <a class="link" [routerLink]="['/', routingList.auth, routingList.signUp]">Зареєструватися</a>
+    </p>
+  </div>
+</div>
+
