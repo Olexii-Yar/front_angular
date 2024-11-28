@@ -8,7 +8,7 @@ import type { ParentDictionaryItem, PetRequestBody, ProposalItem, ProposalRespon
 import type { LoginRequestData, SignUpData } from '../auth/auth.model';
 
 const DOT_NET_API_URL = 'http://localhost:10000/api/';
-const PYTHON_API_URL = 'http://localhost:8000/api/';
+const PYTHON_API_URL = 'http://backton44.azurewebsites.net:8000/api/';
 
 @Injectable({
   providedIn: 'root',
