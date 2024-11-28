@@ -22,9 +22,10 @@ steps:
 
   # Збереження зібраних файлів як артефакта
 - task: PublishPipelineArtifact@1
-  inputs:
-    targetPath: 'dist/it-marathon-v4'
-    publishLocation: 'pipeline'
   displayName: 'Publish build project'
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'TestFront'
+    publishLocation: 'pipeline'
 
   
